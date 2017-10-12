@@ -7,7 +7,7 @@ ARCHS = armv7 arm64
 include theos/makefiles/common.mk
 
 TWEAK_NAME = MailOpener
-MailOpener_FILES = MailOpener.xm
+MailOpener_FILES = MailOpenerHandler.xm
 MailOpener_INSTALL_PATH = /Library/Opener
 MailOpener_FRAMEWORKS = UIKit
 MailOpener_EXTRA_FRAMEWORKS = Opener
