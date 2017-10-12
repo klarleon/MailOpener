@@ -3,6 +3,10 @@
 
 int main (int argc, const char * argv[]) {
     NSString *url = @"mailto:foo@example.com?cc=bar@example.com&subject=Greetings%20from%20Cupertino!&body=Wish%20you%20were%20here!";
+    NSURLComponents *components = [[NSURLComponents alloc] initWithString:url];
+    NSString *fragment = components.fragment;
+    
+    NSLog(@"%@", fragment);
     NSLog(@"%@", url);
     return 0;   
 }
