@@ -8,6 +8,12 @@ int main (int argc, const char * argv[]) {
     
     NSLog(@"%@", fragment);
     NSLog(@"%@", url);
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *logPath = [documentsDirectory stringByAppendingPathComponent:@"console.log"];
+    freopen([logPath cStringUsingEncoding:NSASCIIStringEncoding],"a+",stderr);
+    
     return 0;   
 }
 
