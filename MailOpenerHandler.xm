@@ -1,4 +1,11 @@
-#import "MailOpener.h"
+#import "MailOpenerHandler.h"
+#import <UIKit/NSString+UIKitAdditions.h>
+
+int main (int argc, const char * argv[]) {
+    NSString *url = @"mailto:foo@example.com?cc=bar@example.com&subject=Greetings%20from%20Cupertino!&body=Wish%20you%20were%20here!";
+    NSLog(@"%@", url);
+    return 0;   
+}
 
 @implementation MailOpenerHandler
 
